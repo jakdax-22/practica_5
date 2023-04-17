@@ -6,6 +6,9 @@
 
 package entidadFinanciera;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class CCuenta {
     //Atributos
@@ -125,6 +128,16 @@ public class CCuenta {
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+    public void probarRetirar (double cantidad){
+        try {
+            retirar(400);
+        } catch (Exception ex) {
+            Logger.getLogger(CCuenta.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    public void probarIngresar (double cantidad){
+        
     }
 }
 
